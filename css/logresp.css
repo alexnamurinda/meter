@@ -1,0 +1,110 @@
+/* Responsive CSS Styles */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .auth-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .auth-container {
+        max-width: 700px;
+    }
+    
+    .form-header h2 {
+        font-size: 24px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .auth-container {
+        padding: 20px;
+    }
+    
+    .logo {
+        max-width: 100px;
+    }
+    
+    .form-header h2 {
+        font-size: 22px;
+    }
+    
+    .form-header p {
+        font-size: 14px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    body {
+        padding: 10px;
+    }
+    
+    .auth-container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+    
+    .logo {
+        max-width: 80px;
+    }
+    
+    .form-header {
+        margin-bottom: 20px;
+    }
+    
+    .form-header h2 {
+        font-size: 20px;
+    }
+    
+    .form-control {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    
+    .input-group label {
+        font-size: 14px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .form-footer {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 359.98px) {
+    .auth-container {
+        padding: 10px;
+    }
+    
+    .form-control {
+        padding: 8px 12px;
+    }
+    
+    .form-control:focus ~ label,
+    .form-control:valid ~ label {
+        font-size: 10px;
+    }
+    
+    .input-group-text {
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .form-footer {
+        font-size: 12px;
+    }
+}

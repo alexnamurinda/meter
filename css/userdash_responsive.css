@@ -1,0 +1,247 @@
+/* small media */
+@media (max-width: 768px) {
+    .dashboard-header {
+        padding: .5rem;
+    }
+
+    .dashboard-header img {
+        width: 90px;
+        border-radius: 50%;
+    }
+
+    .dashboard-header h2 {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .dashboard-header .profile-dp {
+        width: 45px;
+    }
+
+    .dashboard-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 65px;
+    }
+
+    .menu-container {
+        background: transparent;
+        padding: 10px;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        background: transparent;
+        color: #f6921e;
+        top: 75px;
+        left: 15px;
+    }
+
+    .user-details {
+        position: fixed;
+        border-radius: 5px;
+        top: 70px;
+        left: 0;
+        height: fit-content;
+        width: 60%;
+        background: linear-gradient(270deg, #8b8b8b, #5e89aa);
+        transform: translateX(-150%);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .user-details ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .user-details ul li {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .user-details ul li a:hover {
+        background-color: #a8a6a6;
+        color: white;
+        width: 90%;
+    }
+
+    .user-details ul li a i {
+        margin-right: 10px;
+    }
+
+    .user-details ul li a {
+        display: block;
+        padding: 12px 16px;
+        font-size: 16px;
+        width: 100%;
+        transition: 0.3s ease;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .user-details.show {
+        transform: translateX(0);
+    }
+
+    .dashboard-item{
+        background-color: #8b8b8b;
+    }
+
+    .dashboard-actions {
+        width: 100%;
+        height: fit-content;
+        top: -10px;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 15px;
+        padding-left: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .dashboard-text h2{
+       font-size: 25px;
+       margin-bottom: 0px;
+       color: #333;
+
+    }
+
+    .tip-card {
+        width: 90%;
+        height: 90px;
+        margin: 20px;
+        margin-top: 0px;
+        
+    }
+
+    .tip-card h3{
+        text-align:center; 
+        font-size: 18px;
+    }
+
+    .card-inner p{
+        font-size: 14px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .usage-container, .usage-summary {
+        flex-direction: column;
+    }
+
+    .summary-card {
+        width: 92%;
+        margin: 0px 10px 20px;
+    }
+
+    .chart-container {
+        width: 100%; 
+        height: auto;
+        margin: 0;
+    }
+    
+    /* package section */
+    .package-selection h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: -15px;
+        font-size: 20px;
+    }
+
+    .packages {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        gap: 15px;
+    }
+    
+    .package-btn {
+        padding: 10px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #1B5E20;
+        color: #fff;
+        cursor: pointer;
+        font-size: 12px;
+        height: 50px;    
+    }
+
+    .download-button-container {
+        text-align: right;
+        margin-bottom: 5px;
+        margin-top: -5px;
+        margin-left: 130px;
+    }
+
+    .download-btn {
+        font-size: 12px;
+    }
+    
+    .payment-table td {
+        font-size: 14px;
+    }
+
+    /* Alerts and notification */
+    .alerts-container {
+        text-align: center;
+    }
+
+    .alerts-container h2{
+        margin-top: -30px;
+    }
+
+    #alerts-link i {
+        font-size: 1.2rem;
+    }
+    
+    .badge {
+        top: 0;
+        right: 172px;
+        font-size: 0.5rem;
+    }
+
+    .support-container {
+        max-width: 90%;
+    }
+    .support-container h3 {
+        text-align: center;
+    }
+    .support-container ul li p {
+        font-size: 13px;
+    }
+
+    .chat-container h3 {
+        font-size: 1.3rem;        
+    }
+
+    #chat-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #chat-input {
+        width: 100%;
+    }
+
+    #chat-form button {
+        border-radius: 5px;
+        width: 50%;
+    }
+
+    .log-button {
+        font-size: 18px;
+        width: 85%;
+       
+    }
+    
+}

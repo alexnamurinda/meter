@@ -1,0 +1,976 @@
+/* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5px 5px 5px;
+    background-color: #e6f7e9;
+    max-width: 100%;
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    position: fixed;
+    padding: .5rem 3rem;
+    z-index: 1000;
+    background-color: #1b75bb;
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.dashboard-header img {
+    width: 110px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.dashboard-header .profile-dp {
+    border-radius: 50%;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+.profile-pic-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Style for form and input inside the menu */
+.profile-pic-menu form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-pic-menu input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.profile-pic-menu button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.log-button {
+    background-color: #f6921e;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    border: none;
+}
+
+.log-button:hover {
+    background-color: #a8a6a6;
+}
+
+/*dashboard-content */
+.dashboard-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+/*user-details */
+.menu-container {
+    position: relative;
+    width: 22.5%;
+    background: linear-gradient(270deg, #8b8b8b, #5e89aa);
+    color: white;
+    border-radius: 5px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: justify;
+}
+
+.hamburger-menu {
+    display: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.user-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.user-details ul li {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.user-details ul li a {
+    display: block;
+    padding: 12px 16px;
+    width: 100%;
+    transition: 0.3s ease;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.user-details ul li a:hover {
+    background-color: #a8a6a6;
+    color: white;
+}
+
+.user-details ul li a i {
+    margin-right: 20px;
+}
+
+/* Dashboard Actions */
+.dashboard-actions {
+    width: 77%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px;
+    position: relative;
+    overflow: fit-content;
+}
+
+.content-section {
+    margin-bottom: 0;
+}
+
+/* Dashboard Text */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 15px;
+    height: fit-content;
+}
+
+.dashboard-item {
+    background-color: #8b8b8b;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+
+.dashboard-text h2 {
+    font-size: 25px;
+    margin-bottom: 0px;
+    color: #333;
+
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back,
+.flip-card-extra {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: white;
+}
+
+.flip-card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-extra {
+    background-color: white;
+    transform: rotateY(360deg);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    /* This flips the card */
+}
+
+.flip-card:hover .flip-card-inner-1 {
+    transform: rotateY(180deg);
+}
+
+/* Headings */
+.content-section h2 {
+    color: #8b8b8b;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.content-section h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Profile Photo Section */
+.profile-photo-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    margin-bottom: 10px;
+}
+
+.profile-photo-section button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-photo-section button:hover {
+    background-color: #0056b3;
+}
+
+.account-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.account-container h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.residence {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-column {
+    flex: 1;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+select,
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+select,
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.alert {
+    padding: 15px;
+    background-color: #d9edf7;
+    color: #31708f;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.alert strong {
+    font-weight: bold;
+}
+
+.content-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="file"],
+form select {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Account Summary Section */
+.account-summary-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.account-summary-section ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.account-summary-section ul li strong {
+    color: #0056b3;
+}
+
+/* Usage Section */
+.usage-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.usage-summary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.summary-card {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 10px 10px 10px;
+    /* Adjusted bottom margin for spacing */
+}
+
+.summary-card h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.summary-card p {
+    font-size: 16px;
+    color: #1b75bb;
+    font-weight: bold;
+}
+
+.chart-container {
+    width: 100%;
+    height: 350px;
+    margin: 10px auto;
+    justify-content: center;
+}
+
+
+.payment-history-container {
+    padding: 20px;
+    margin: auto;
+    width: 100%;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.payment-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.payment-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.payment-table th {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background: #8b8b8b;
+    color: white;
+    font-weight: bold;
+}
+
+.payment-table tr:nth-child(odd) {
+    background: #f2f2f2;
+}
+
+.payment-table tr:hover {
+    background: #e1e1e1;
+}
+
+.download-button-container {
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.download-btn {
+    background-color: #f6921e;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+}
+
+.download-btn:hover {
+    background-color: #a8a6a6;
+}
+
+.payment-footer {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    font-size: 11px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.payment-footer a {
+    color: #1b75bb;
+    text-decoration: none;
+}
+
+.payment-footer a:hover {
+    text-decoration: underline;
+}
+
+.payment-footer em {
+    color: #555;
+    font-style: italic;
+}
+
+
+/* Recharge Container */
+.recharge-container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Package Buttons */
+.package-selection h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.packages {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.package-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1B5E20;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    height: 70px;
+
+}
+
+.package-btn:hover {
+    background-color: #3a943e;
+}
+
+/* Manual Recharge Form */
+.manual-recharge h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#recharge-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#recharge-form input,
+#recharge-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.recharge-btn {
+    width: 50%;
+    padding: 10px;
+    background-color: #1b75bb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.recharge-btn:hover {
+    background-color: #007BFF;
+}
+
+/* Message Styling */
+#recharge-message {
+    font-size: 15px;
+    color: #555;
+}
+
+/* Alerts Section Styling */
+.alerts-container {
+    padding: 30px;
+    border: 0px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.alerts-container h3 {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #343a40;
+    text-align: center;
+}
+
+.alerts-container p {
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #495057;
+    line-height: 1.5;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Badge Counter on Notification Icon */
+#alerts-link {
+    position: relative;
+    display: inline-block;
+}
+
+#alerts-link i {
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 0px;
+    right: 200px;
+    background: #f6921e;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 5px 8px;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhance Notification Badge on Hover */
+#alerts-link:hover .badge {
+    background: #e6953a;
+}
+
+/* Notification Icon Styling */
+#alerts-link i {
+    color: #fff;
+}
+
+/* Consumption Tips Card */
+.tip-card {
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+
+.tip-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background-color: #1b75bb;
+    color: white;
+    border: none;
+}
+
+.card-front p,
+.card-back p {
+    color: white;
+    font-size: 20px;
+}
+
+.card-back {
+    background-color: #1B5E20;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+/* Support Container Styling */
+.support-container {
+    padding: 10px 30px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.support-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.support-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.support-container ul li {
+    margin-bottom: 15px;
+    color: #495057;
+}
+
+.support-container ul li p {
+    margin: 5px 0;
+    text-align: justify;
+}
+
+.faq-btn {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background-color: #1b75bb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.faq-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Chat Container Styling */
+.chat-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 0px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 10px auto;
+}
+
+.chat-container h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+}
+
+/* Chat Box Styling */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 0px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+}
+
+.chat-messages p {
+    margin: 10px 0;
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    font-size: 0.95rem;
+}
+
+/* Chat Container Styling */
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Space between messages */
+    padding: 10px;
+    height: fit-content;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border: 0px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Bot Message Styling */
+.bot-message {
+    background-color: #eaf5ff;
+    color: #1b75bb;
+    align-self: flex-start;
+    /* Align bot messages to the left */
+    border: 1px solid #d0e8ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 60%;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+/* User Message Styling */
+.user-message {
+    background-color: #d4edda;
+    color: #333333;
+    align-self: flex-end;
+    /* Align user messages to the right */
+    border: 1px solid #c3e6cb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 60%;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+/* Chat Input Form */
+#chat-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+#chat-input:focus {
+    outline: none;
+}
+
+#chat-form button {
+    padding: 10px 20px;
+    background-color: #1b75bb;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#chat-form button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
