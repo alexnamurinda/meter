@@ -1,5 +1,6 @@
 <?php
-include 'db.php';
+include '../databases/databaseconnection.php';
+include '../databases/error_handler.php';
 
 header('Content-Type: application/json');
 
