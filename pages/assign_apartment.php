@@ -1,12 +1,6 @@
 <?php
-// session_start();
-// if (!isset($_SESSION['admin'])) {
-//     header("Location: getstarted.php?error=unauthorized");
-//     exit();
-// }
-
-// Include the database connection
-include 'db.php';
+include '../databases/databaseconnection.php';
+include '../databases/error_handler.php';
 
 try {
     // Handle adding/editing apartments
