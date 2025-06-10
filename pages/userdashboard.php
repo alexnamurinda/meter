@@ -606,10 +606,10 @@ try {
     <script src="../scripts/visual_charts.js"></script>
 
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="myCharts.js"></script>
+    <!-- <script src="myCharts.js"></script> -->
     <script src="event_listener.js"></script>
-    <script src="maps.js"></script>
-    <script src="notifications.js"></script>
+    <!-- <script src="maps.js"></script> -->
+    <!-- <script src="notifications.js"></script> -->
     <script
         src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
