@@ -599,7 +599,7 @@ try {
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="payment.js"></script>
+    <script src="../scripts/payment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
 
@@ -607,7 +607,7 @@ try {
 
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- <script src="myCharts.js"></script> -->
-    <script src="event_listener.js"></script>
+    <script src="../scripts/event_listener.js"></script>
     <!-- <script src="maps.js"></script> -->
     <!-- <script src="notifications.js"></script> -->
     <script
@@ -824,7 +824,7 @@ try {
 
     <!-- Include Plotly.js -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="energy_chart.js"></script>
+    <script src="../scripts/energy_chart.js"></script>
 
     <script>
         // Get the profile picture and menu elements
