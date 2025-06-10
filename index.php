@@ -84,8 +84,29 @@
                     <div class="hero-content" data-aos="fade-right">
                         <h1 id="hero-heading"></h1>
                         <p>Track power usage, get alerts on low balances, and control your energy consumption with ease</p>
+                        <div class="launch-info">
+                            <p id="launch-message">We're launching soon! Stay tuned...</p>
+                            <div id="countdown-timer" class="d-flex justify-content-start">
+                                <div class="countdown-item">
+                                    <span id="days">00</span>
+                                    <span class="countdown-label">Days</span>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="hours">00</span>
+                                    <span class="countdown-label">Hours</span>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="minutes">00</span>
+                                    <span class="countdown-label">Minutes</span>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="seconds">00</span>
+                                    <span class="countdown-label">Seconds</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="hero-cta">
-                            <a href="pages/login.php" class="btn btn-primary">Get Ready</a>
+                            <a href="#contact-section" class="btn btn-primary">Get Ready</a>
                             <a href="#how-it-works" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>

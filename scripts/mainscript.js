@@ -41,6 +41,41 @@ document.addEventListener('DOMContentLoaded', function () {
     initMobileMenu();
 });
 
+// Countdown Timer
+function initCountdownTimer() {
+    let launchDate;
+
+    // Check if launch date is already stored in localStorage
+    if (localStorage.getItem('launchDate')) {
+        launchDate = new Date(localStorage.getItem('launchDate'));
+    } else {
+        // If not set, calculate it and store it
+        launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 20);
+        localStorage.setItem('launchDate', launchDate.toISOString());
+    }
+
+    const countdownTimer = setInterval(function () {
+        const now = new Date();
+        const timeLeft = launchDate - now;
+
+        if (timeLeft > 0) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
+        } else {
+            clearInterval(countdownTimer);
+            document.getElementById("countdown-timer").innerHTML = "<div class='countdown-complete'>We're live!</div>";
+            document.getElementById("launch-message").innerHTML = "The service has launched!";
+        }
+    }, 1000);
+}
 
 // Navbar scroll effect
 function initNavbarScroll() {
