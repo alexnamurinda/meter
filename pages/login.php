@@ -208,7 +208,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Sign Up-Kooza Smart Meter</title>
+    <title>Login | Sign Up-FastNet Solutions</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -234,7 +234,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
                 <div class="form-section login-section active">
                     <div class="form-header">
                         <h2>Welcome Back</h2>
-                        <!-- <p>Log in to your Kooza Smart Meter account</p> -->
+                        <!-- <p>Log in to your FastNet Solutions account</p> -->
                     </div>
 
                     <div class="alert alert-danger error-message" id="errorMessage" role="alert">
@@ -281,7 +281,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
                 <div class="form-section register-section">
                     <div class="form-header">
                         <h2>Create Account</h2>
-                        <!-- <p>Register a new Kooza Smart Meter account</p> -->
+                        <!-- <p>Register a new FastNet Solutions account</p> -->
                     </div>
 
                     <form id="signupForm" action="login.php" method="POST">

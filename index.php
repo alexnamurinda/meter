@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <title>Smart Meter Project - Kooza Electric Company</title>
+    <title>Smart Meter Project - FastNet Solutions Company</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -42,7 +42,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <img src="images/logo.png" alt="Kooza Electric Logo" class="logo-image">
+                <img src="images/logo.png" alt="FastNet Solutions Logo" class="logo-image">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -84,29 +84,8 @@
                     <div class="hero-content" data-aos="fade-right">
                         <h1 id="hero-heading"></h1>
                         <p>Track power usage, get alerts on low balances, and control your energy consumption with ease</p>
-                        <div class="launch-info">
-                            <p id="launch-message">We're launching soon! Stay tuned...</p>
-                            <div id="countdown-timer" class="d-flex justify-content-start">
-                                <div class="countdown-item">
-                                    <span id="days">00</span>
-                                    <span class="countdown-label">Days</span>
-                                </div>
-                                <div class="countdown-item">
-                                    <span id="hours">00</span>
-                                    <span class="countdown-label">Hours</span>
-                                </div>
-                                <div class="countdown-item">
-                                    <span id="minutes">00</span>
-                                    <span class="countdown-label">Minutes</span>
-                                </div>
-                                <div class="countdown-item">
-                                    <span id="seconds">00</span>
-                                    <span class="countdown-label">Seconds</span>
-                                </div>
-                            </div>
-                        </div>
                         <div class="hero-cta">
-                            <a href="#contact-section" class="btn btn-primary">Get Ready</a>
+                            <a href="pages/login.php" class="btn btn-primary" target="_blank">Get started</a>
                             <a href="#how-it-works" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -231,7 +210,7 @@
                         <span class="section-subtitle">About Us</span>
                         <h2 class="section-title">Innovative Solutions for Energy Management</h2>
                         <div class="section-divider"></div>
-                        <p>Kooza Electric is a pioneering technology company dedicated to creating innovative solutions that address pressing societal challenges. Our projects span across multiple sectors, including energy, agriculture, healthcare, and ICT, with a shared vision of empowering communities and transforming lives.</p>
+                        <p>FastNet Solutions is a pioneering technology company dedicated to creating innovative solutions that address pressing societal challenges. Our projects span across multiple sectors, including energy, agriculture, healthcare, and ICT, with a shared vision of empowering communities and transforming lives.</p>
 
                         <div class="mission-vision-tabs">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -366,7 +345,7 @@
                 <!-- <span class="section-subtitle">Our Experts</span> -->
                 <h2 class="section-title">Meet Our Team</h2>
                 <div class="section-divider"></div>
-                <p class="section-description">The minds behind our innovative solutions</p>
+                <p class="section-description">The minds behind the success of advanced smart meter project</p>
             </div>
 
             <div class="row">
@@ -374,7 +353,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="team-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="team-card-image">
-                            <img src="images/staff1.jpeg" alt="Huzaifa Sserugo" class="img-fluid">
+                            <img src="images/supervisor.jpeg" alt="Dr. Mayur Kuma Chhiper" class="img-fluid">
                             <div class="social-overlay">
                                 <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
                                 <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -382,8 +361,8 @@
                             </div>
                         </div>
                         <div class="team-card-content">
-                            <h3>Huzaifa Sserugo</h3>
-                            <p>CEO</p>
+                            <h3>Dr. Mayur Kuma Chhipa</h3>
+                            <p>Supervisor</p>
                         </div>
                     </div>
                 </div>
@@ -395,13 +374,13 @@
                             <img src="images/developer.jpg" alt="Namurinda Alex" class="img-fluid">
                             <div class="social-overlay">
                                 <a href="https://www.linkedin.com/in/namurinda-alex-25217a255/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                                <a href="pages/login.php" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
                                 <a href="https://github.com/namurindaalex" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <div class="team-card-content">
                             <h3>Namurinda Alex</h3>
-                            <p>Head Developer</p>
+                            <p>Student Innovator</p>
                         </div>
                     </div>
                 </div>
@@ -410,16 +389,11 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="team-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="team-card-image">
-                            <img src="images/will.jpg" alt="Ahaisibwe William" class="img-fluid">
-                            <div class="social-overlay">
-                                <a href="https://www.linkedin.com/in/ahaisibwe-william-376a42298/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://x.com/EngWilliam11" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-                                <a href="https://github.com/Willyahaisibwe" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                            </div>
+                            <img src="images/profile_pic.png" alt="Ahaisibwe William" class="img-fluid">
                         </div>
                         <div class="team-card-content">
-                            <h3>Ahaisibwe William</h3>
-                            <p>Head of Electronics</p>
+                            <h3>FastNet solutions company</h3>
+                            <p>Sponsor</p>
                         </div>
                     </div>
                 </div>
@@ -588,7 +562,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h3>Our Location</h3>
-                        <p>Spring Road, Plot 145, Bugolobi</p>
+                        <p>Lugogo Bypass, Plot 145</p>
                     </div>
                 </div>
 
@@ -598,7 +572,7 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h3>Email Us</h3>
-                        <p><a href="mailto:koozaelectric@gmail.com">koozaec@gmail.com</a></p>
+                        <p><a href="mailto:koozaelectric@gmail.com">namurindaalex43@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -660,13 +634,20 @@
 
                 <div class="col-lg-6">
                     <div class="contact-map-wrapper" data-aos="zoom-in">
-                        <h3>Find Us On Map</h3>
+                        <h3>View map</h3>
                         <div class="contact-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7579537337703!2d32.6160469!3d0.3173678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbc0fc4a4bff7%3A0xeaed1a8e77c0de11!2sBugolobi%2C%20Kampala!5e0!3m2!1sen!2sug!4v1649414591090!5m2!1sen!2sug"
-                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7441375042476!2d32.6123367748952!3d0.31978206307815095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbc8643e5db1b%3A0xddf437982d3eae3d!2sLugogo%20Bypass%2C%20Kampala!5e0!3m2!1sen!2sug!4v1718648672283!5m2!1sen!2sug"
+                                width="100%"
+                                height="350"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -701,9 +682,9 @@
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <div class="footer-about">
                         <div class="footer-logo">
-                            <img src="images/logo.png" alt="Kooza Electric Logo" class="img-fluid">
+                            <img src="images/logo.png" alt="FastNet Solutions Logo" class="img-fluid">
                         </div>
-                        <p>Protecting your bills through technology. Kooza Electric provides innovative solutions for efficient energy management in shared spaces.</p>
+                        <p>Protecting your bills through technology. FastNet Solutions provides innovative solutions for efficient energy management in shared spaces.</p>
                         <div class="social-icons">
                             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -744,9 +725,9 @@
                     <div class="footer-contact">
                         <h3>Contact Us</h3>
                         <ul class="list-unstyled">
-                            <li><i class="fas fa-map-marker-alt"></i> Spring Road, Plot 145, Bugolobi</li><br>
-                            <li><i class="fas fa-phone-alt"></i> <a href="tel:+256780393671">+256 780 393 671</a></li><br>
-                            <li><i class="fas fa-envelope"></i> <a href="mailto:koozaec@gmail.com">koozaec@gmail.com</a></li><br>
+                            <li><i class="fas fa-map-marker-alt"></i> Lugogo Bypass, Plot 145</li><br>
+                            <li><i class="fas fa-phone-alt"></i> <a href="tel:+256780393671">+256 744 766 410</a></li><br>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:namurindaalex43@gmail.com">namurindaalex43@gmail.com</a></li><br>
                             <li><i class="fas fa-clock"></i> Monday - Friday: 9AM - 5PM</li><br>
                         </ul>
                     </div>
@@ -756,7 +737,7 @@
             <div class="footer-bottom">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start">
-                        <p class="copyright">© 2025 Kooza Electric. All Rights Reserved.</p>
+                        <p class="copyright">© 2025 FastNet Solutions. All Rights Reserved.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <p class="footer-links">

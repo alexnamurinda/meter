@@ -333,7 +333,7 @@ header("Permissions-Policy: camera=(), microphone=(), geolocation=()");
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                            <p>&copy; 2024 Kooza Technologies. All Rights Reserved.</p>
+                            <p>&copy; 2024 FastNet Solutions. All Rights Reserved.</p>
                         </div>
                         <div class="col-md-6 text-md-end">
                             <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>

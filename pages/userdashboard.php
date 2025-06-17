@@ -280,12 +280,12 @@ if (!empty($room_id)) {
 
                                     <!-- Back of the card -->
                                     <div class="flip-card-back" style="display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #1e90ff; color: white; text-align: center; border-radius: 5px; padding: 10px;">
-                                        <div style="font-size: 15px; font-weight: bold; margin-bottom: 5px;">Kooza Smart Meter Solutions</div>
+                                        <div style="font-size: 15px; font-weight: bold; margin-bottom: 5px;">FastNet  Solutions</div>
                                         <div style="width: 80%; height: 1px; background-color: white; margin: 10px 0;"></div>
                                         <div style="font-size: 10px; line-height: 1.6; margin-bottom: 10px;">
-                                            <span>Email: support@koozasmart.com</span><br>
-                                            <span>Phone: +256 780 393671</span><br>
-                                            <span>Website: www.koozasmart.com</span>
+                                            <span>Email: fastnetug.com</span><br>
+                                            <span>Phone: +256 44 766 410</span><br>
+                                            <span>Website: www.fastnetug.com</span>
                                         </div>
                                         <div>
                                             <img src="../images/logo.png" alt="QR Code" style="width: 80px; height: 50px; border-radius: 5px;">
@@ -474,11 +474,11 @@ if (!empty($room_id)) {
 
                     <!-- Footer -->
                     <div class="payment-footer">
-                        <p>Kooza Smart Meter Solutions</p>
-                        <p>123 Energy Street, Kampala, Uganda</p>
-                        <p>+256 780 393671 | support@smartmeter.com</p>
-                        <p><a href="index.php" target="_blank">www.koozasmartmeter.com</a></p>
-                        <p><em>Thank you for choosing Kooza Smart Meter Solutions!</em></p>
+                        <p>FastNet  Solutions</p>
+                        <p>Logogo Bypass, Kampala</p>
+                        <p>+256 744 766 410 | support@smartmeter.com</p>
+                        <p><a href="index.php" target="_blank">www.fastnetug.com</a></p>
+                        <p><em>Thank you for choosing FastNet  Solutions!</em></p>
                     </div>
                 </div>
 

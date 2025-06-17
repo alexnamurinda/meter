@@ -72,7 +72,7 @@ function initCountdownTimer() {
         } else {
             clearInterval(countdownTimer);
             document.getElementById("countdown-timer").innerHTML = "<div class='countdown-complete'>We're live!</div>";
-            document.getElementById("launch-message").innerHTML = "The service has launched!";
+            // document.getElementById("launch-message").innerHTML = "The service has launched!";
         }
     }, 1000);
 }
