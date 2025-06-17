@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Send data to the server via AJAX
-        fetch("process_recharge.php", {
+        fetch("../pages/process_recharge.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

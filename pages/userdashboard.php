@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['upload'])) {
     if (!empty($_FILES['profile_pic']['name'])) {
         $file_name = $_FILES['profile_pic']['name'];
         $file_tmp = $_FILES['profile_pic']['tmp_name'];
-        $target_directory = "images/";
+        $target_directory = "../images/";
         $target_file = $target_directory . basename($file_name);
 
         // Validate and move uploaded file
@@ -172,6 +172,25 @@ try {
     $residenceHeading = '<h2 style="text-align:center;">Manage Your Energy Usage with Real-Time Monitoring</h2>';
 }
 
+// Fetch alerts for this user's room
+$alerts = [];
+
+if (!empty($room_id)) {
+    try {
+        $stmt = $conn->prepare("
+            SELECT alert_text, alert_date 
+            FROM alerts 
+            WHERE room_id = :room_id 
+            ORDER BY alert_date DESC 
+            LIMIT 5
+        ");
+        $stmt->bindParam(':room_id', $room_id, PDO::PARAM_STR);
+        $stmt->execute();
+        $alerts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        echo "Error fetching alerts: " . $e->getMessage();
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -269,7 +288,7 @@ try {
                                             <span>Website: www.koozasmart.com</span>
                                         </div>
                                         <div>
-                                            <img src="images/logo.png" alt="QR Code" style="width: 80px; height: 50px; border-radius: 5px;">
+                                            <img src="../images/logo.png" alt="QR Code" style="width: 80px; height: 50px; border-radius: 5px;">
                                         </div>
                                     </div>
                                 </div>
@@ -520,37 +539,24 @@ try {
                     });
                 </script>
 
-
-
                 <!-- Alerts -->
                 <div id="alerts-content" class="content-section" style="display:none;">
                     <div class="alerts-container">
-                        <!-- Current Alerts -->
                         <h2>Recent Alerts</h2>
                         <div id="current-alerts">
-                            <p id="latest-alert">
-                                <strong>2024-11-08:</strong> Your balance is critically low. Please recharge immediately to avoid disconnection.
-                            </p>
-                            <p id="second-latest-alert">
-                                <strong>2024-11-07:</strong> Sudden increase in consumption detected. Usage exceeded daily average.
-                            </p>
-                        </div>
-
-                        <!-- Consumption Tips Card -->
-                        <h3>Consumption Tips</h3>
-                        <div class="tip-card">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <p>Turn off appliances when not in use to save energy.</p>
-                                </div>
-                                <div class="card-back">
-                                    <p>Consider using energy-efficient bulbs and devices.</p>
-                                </div>
-                            </div>
+                            <?php if (!empty($alerts)): ?>
+                                <?php foreach ($alerts as $index => $alert): ?>
+                                    <p>
+                                        <strong><?= htmlspecialchars($alert['alert_date']) ?>:</strong>
+                                        <?= htmlspecialchars($alert['alert_text']) ?>
+                                    </p>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <p>No alerts at the moment for your room. Stay tuned!</p>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
-
 
                 <!-- Support -->
                 <div id="support-content" class="content-section" style="display:none;">

@@ -137,6 +137,18 @@ try {
     ";
     $conn->exec($createtransactionsTableQuery);
 
+    // Create the alerts table
+    $createAlertsTableQuery = "
+    CREATE TABLE IF NOT EXISTS alerts (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        room_id VARCHAR(50) NOT NULL,
+        alert_text TEXT NOT NULL,
+        alert_date DATE NOT NULL DEFAULT CURRENT_DATE
+    ) ENGINE=InnoDB;
+    ";
+    $conn->exec($createAlertsTableQuery);
+
+
     // Create the room_energy_history table
     $createRoomEnergyHistoryTableQuery = "
     CREATE TABLE IF NOT EXISTS room_energy_history (
