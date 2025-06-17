@@ -143,9 +143,11 @@ try {
         id INT AUTO_INCREMENT PRIMARY KEY,
         room_id VARCHAR(50) NOT NULL,
         alert_text TEXT NOT NULL,
-        alert_date DATE NOT NULL DEFAULT CURRENT_DATE
+        alert_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (room_id) REFERENCES rooms(room_id) ON DELETE CASCADE
     ) ENGINE=InnoDB;
     ";
+
     $conn->exec($createAlertsTableQuery);
 
 
