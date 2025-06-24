@@ -6,7 +6,7 @@ function createEnergyConsumptionGauge(containerId, value) {
         value: value,
         title: { text: "Units Consumed", font: { size: 20, color: 'grey' } },
         number: {
-            font: { size: 35 }, valueformat: ".2f",
+            font: { size: 35 }, valueformat: ".3f",
             suffix: "<span style='font-size:12px;'>kWh</span>"
         },
 
@@ -30,7 +30,7 @@ function createRemainingUnitsGauge(containerId, value) {
         value: value,
         title: { text: "Remaining Units", font: { size: 20, color: 'grey' } },
         number: {
-            font: { size: 35 }, valueformat: ".2f",
+            font: { size: 35 }, valueformat: ".3f",
             suffix: "<span style='font-size:12px;'>kWh</span>"
         },
         gauge: {
