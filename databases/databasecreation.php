@@ -114,6 +114,7 @@ try {
         remaining_units DECIMAL(10, 3) NOT NULL DEFAULT 0.000,
         new_consumed DECIMAL(10, 3) DEFAULT NULL,
         plotted_value DECIMAL(10, 3) DEFAULT NULL,
+        total_purchased DECIMAL(10,3) DEFAULT 0.000,
         last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (room_id) REFERENCES rooms(room_id) ON DELETE CASCADE
