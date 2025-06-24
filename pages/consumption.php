@@ -144,7 +144,7 @@ try {
     $totalNewConsumption = 0;
     foreach ($response['updated_rooms'] as $room) {
         // Get previous day's consumption to calculate new consumption
-        $prevConsumptionStmt = $conn->prepare("SELECT energy_consumed FROM daily_room_consumption 
+        $prevConsumptionStmt = $conn->prepare("SELECT energy_consumed FROM room_energy 
                                               WHERE room_id = :room_id AND date = :date");
         $prevConsumptionStmt->bindParam(':room_id', $room['room_id']);
         $prevConsumptionStmt->bindParam(':date', $today);
@@ -159,7 +159,7 @@ try {
             
             // Update or insert daily room consumption
             if ($prevData) {
-                $updateDailyRoomStmt = $conn->prepare("UPDATE daily_room_consumption 
+                $updateDailyRoomStmt = $conn->prepare("UPDATE room_energy 
                                                       SET energy_consumed = :consumed 
                                                       WHERE room_id = :room_id AND date = :date");
                 $updateDailyRoomStmt->bindParam(':consumed', $room['consumed']);
@@ -167,7 +167,7 @@ try {
                 $updateDailyRoomStmt->bindParam(':date', $today);
                 $updateDailyRoomStmt->execute();
             } else {
-                $insertDailyRoomStmt = $conn->prepare("INSERT INTO daily_room_consumption 
+                $insertDailyRoomStmt = $conn->prepare("INSERT INTO room_energy 
                                                       (room_id, date, energy_consumed) 
                                                       VALUES (:room_id, :date, :consumed)");
                 $insertDailyRoomStmt->bindParam(':room_id', $room['room_id']);
