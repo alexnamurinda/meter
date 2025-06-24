@@ -82,15 +82,15 @@ try {
     ";
     $conn->exec($createAdminTableQuery);
 
-    // Create the daily_energy_consumption table
-    $createdaily_energy_consumptionTableQuery = "
-    CREATE TABLE IF NOT EXISTS daily_energy_consumption (
+    // Create the room_energy table
+    $createroom_energyTableQuery = "
+    CREATE TABLE IF NOT EXISTS room_energy (
         id INT AUTO_INCREMENT PRIMARY KEY,
         date DATE NOT NULL UNIQUE,
         energy_consumed DECIMAL(10,3) NOT NULL
     ) ENGINE=InnoDB;
     ";
-    $conn->exec($createdaily_energy_consumptionTableQuery);
+    $conn->exec($createroom_energyTableQuery);
 
     // Create the feedbacks table
     $createFeedbackTableQuery = "

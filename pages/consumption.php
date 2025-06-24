@@ -180,13 +180,13 @@ try {
 
     // Update overall daily energy consumption
     if ($totalNewConsumption > 0) {
-        $checkDailyStmt = $conn->prepare("SELECT date FROM daily_energy_consumption WHERE date = :date");
+        $checkDailyStmt = $conn->prepare("SELECT date FROM room_energy WHERE date = :date");
         $checkDailyStmt->bindParam(':date', $today);
         $checkDailyStmt->execute();
 
         if ($checkDailyStmt->rowCount() > 0) {
             // Update existing daily record
-            $updateDailyStmt = $conn->prepare("UPDATE daily_energy_consumption 
+            $updateDailyStmt = $conn->prepare("UPDATE room_energy 
                                               SET energy_consumed = energy_consumed + :total_consumed 
                                               WHERE date = :date");
             $updateDailyStmt->bindParam(':total_consumed', $totalNewConsumption);
@@ -194,7 +194,7 @@ try {
             $updateDailyStmt->execute();
         } else {
             // Insert new daily record
-            $insertDailyStmt = $conn->prepare("INSERT INTO daily_energy_consumption 
+            $insertDailyStmt = $conn->prepare("INSERT INTO room_energy 
                                               (date, energy_consumed) 
                                               VALUES (:date, :total_consumed)");
             $insertDailyStmt->bindParam(':date', $today);
