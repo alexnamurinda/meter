@@ -269,7 +269,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 mb-5 mb-lg-0">
                     <div class="about-image" data-aos="zoom-in">
-                        <img src="images/lg.png" alt="Smart Meter" class="img-fluid main-img rounded-4 shadow-lg">
+                        <img src="images/rep.png" alt="Smart Meter" class="img-fluid main-img rounded-4 shadow-lg">
                         <div class="experience-badge">
                             <span class="years">5+</span>
                             <span class="text">Years of Experience</span>
