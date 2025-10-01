@@ -1,8 +1,8 @@
 <?php
 $hostname = getenv('DB_HOST') ?: 'localhost';
 $db_name = getenv('DB_DATABASE') ?: 'kooza_db';
-$username = getenv('DB_USERNAME') ?: 'root';
-$password = getenv('DB_PASSWORD') ?: 'Alex@mysql123';
+$username = getenv('DB_USERNAME') ?: 'fastnetug_user1';
+$password = getenv('DB_PASSWORD') ?: 'smartwatt@mysql123';
 $port = getenv('DB_PORT') ?: '3306';
 $charset = 'utf8mb4';
 
