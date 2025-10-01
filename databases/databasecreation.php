@@ -82,16 +82,6 @@ try {
     ";
     $conn->exec($createAdminTableQuery);
 
-    // Create the room_energy table
-    $createroom_energyTableQuery = "
-    CREATE TABLE IF NOT EXISTS room_energy (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        date DATE NOT NULL UNIQUE,
-        energy_consumed DECIMAL(10,3) NOT NULL
-    ) ENGINE=InnoDB;
-    ";
-    $conn->exec($createroom_energyTableQuery);
-
     // Create the feedbacks table
     $createFeedbackTableQuery = "
     CREATE TABLE IF NOT EXISTS feedbacks (
