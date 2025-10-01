@@ -51,8 +51,8 @@ if (isset($_GET['resend']) && $_GET['resend'] == 'true') {
     $phone_number = $_SESSION['registration_data']['phone_number'];
     
     // SMS API setup (reused from login.php)
-    $apiUsername = 'agritech_info';
-    $apiKey = 'atsk_d30afdc12c16b290766e27594e298b4c82fa0ca3d87f723f7a2576aa9a6d0b9d096fa012';
+    $apiUsername = 'fastnetug';
+    $apiKey = 'atsk_55f3cd22b22762efe6a8342bcbd478239a69a4aca7588f25694cdaac498101e0d027488d';
     $apiUrl = 'https://api.africastalking.com/version1/messaging';
 
     // Prepare the message
